@@ -4,8 +4,8 @@
 
 Doctor Tracker is a secure admin portal for managing doctors and their patients. This repository is the **standalone REST API** behind it: an Express + MongoDB server that handles authentication, doctor and patient CRUD, and the aggregation queries that power the analytics dashboard. It is built around query performance: every list endpoint paginates, searches and filters through purpose-built compound indexes, and the dashboard is computed with MongoDB aggregation pipelines instead of in application code.
 
-> Frontend repository:
-> Live API: (`GET /api/health`)
+> Frontend repository: https://github.com/R4PTORxAR4F4T/doctor-tracker-frontend
+> Server Live API: https://doctor-tracker-frontend-flame.vercel.app/login (`GET /api/health`)
 
 ---
 
@@ -161,5 +161,6 @@ UI screenshots (desktop and mobile) live in the **frontend repository** README. 
 - Single role (`admin`); the `authorize()` middleware is in place for adding more.
 - JWTs are stateless: there is no server-side revocation list (a deleted admin keeps access until the token expires).
 - No automated test suite is included yet; validation and error paths were designed to be easy to cover with `supertest` + `mongodb-memory-server`.
-#   d o c t o r - t r a c k e r - b a c k e n d  
- 
+  #   d o c t o r - t r a c k e r - b a c k e n d 
+   
+   
